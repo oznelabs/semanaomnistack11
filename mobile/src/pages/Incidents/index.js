@@ -37,7 +37,7 @@ export default function Incidents() {
           style={style.incidentList}
           showsVerticalScrollIndicator={false}
           renderItem={({ item }) => (
-            <View style={style.incident}>
+            <View key={item.valueOf()} style={style.incident}>
               <Text style={style.incidentProperty}>ONGs: </Text>
               <Text style={style.incidentValue}>VivaBarra</Text>
               <Text style={style.incidentProperty}>CASO: </Text>
@@ -56,7 +56,7 @@ export default function Incidents() {
           keyExtractor={item => item.id}
         />
       </SafeAreaView>
-      
+
     </View>
   )
 }
