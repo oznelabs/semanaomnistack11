@@ -56,8 +56,10 @@ export default StyleSheet.create({
     borderRadius: 8,
     height: 50,
     width: '48%',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
+    paddingHorizontal: 20,
   },
   actionText: {
     color: '#fff',

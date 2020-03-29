@@ -1,17 +1,22 @@
 import React from 'react';
-import { Feather } from '@expo/vector-icons';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 
-import logoImg from '../../assets/logo.png';
+import { useNavigation } from '@react-navigation/native';
 
+import { Feather, FontAwesome } from '@expo/vector-icons';
+import logoImg from '../../assets/logo.png';
 import style from './style';
 
 export default function Detail() {
+  const navigation = useNavigation();
+  function navigateBack() {
+    navigation.goBack();
+  }
   return (
     <View style={style.container}>
       <View style={style.header} >
         <Image source={logoImg} />
-        <TouchableOpacity onPress={() => { }} >
+        <TouchableOpacity onPress={navigateBack} >
           <Feather name="arrow-left" size={28} color="#E82041" />
         </TouchableOpacity>
       </View>
@@ -30,9 +35,11 @@ export default function Detail() {
         <View style={style.actions}>
           <TouchableOpacity style={style.action}>
             <Text style={style.actionText}>WhatsApp</Text>
+            <FontAwesome name="whatsapp" color="#fff" size={20} />
           </TouchableOpacity>
           <TouchableOpacity style={style.action}>
             <Text style={style.actionText}>E-mail</Text>
+            <FontAwesome name="envelope" color="#fff" size={20} />
           </TouchableOpacity>
         </View>
       </View>
