@@ -48,8 +48,8 @@ export default function Incidents() {
         showsVerticalScrollIndicator={false}
         renderItem={({ item: incident }) => (
           <View key={incident.id} style={style.incident}>
-            <Text style={style.incidentProperty}>ONGs: </Text>
-            <Text style={style.incidentValue}>{incident.name}</Text>
+            <Text style={style.incidentProperty}>ONG: </Text>
+            <Text style={style.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
             <Text style={style.incidentProperty}>CASO: </Text>
             <Text style={style.incidentValue}>{incident.title}</Text>
             <Text style={style.incidentProperty}>VALOR: </Text>

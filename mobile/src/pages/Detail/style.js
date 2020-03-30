@@ -10,13 +10,13 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    marginBottom: 20,
   },
   incident: {
     padding: 24,
     borderRadius: 8,
     backgroundColor: '#fff',
-    marginBottom: 16,
-    marginTop: 48,
+    marginBottom: 16,    
   },
   incidentProperty: {
     fontSize: 14,
